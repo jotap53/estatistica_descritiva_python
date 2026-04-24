@@ -1,0 +1,19 @@
+# Ambiente virtual
+venv/
+.venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Dados sensíveis
+.env
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
