@@ -18,5 +18,8 @@
     "editor.suggestOnTriggerCharacters": true,
     "editor.guides.indentation": true,
     "editor.guides.highlightActiveIndentation": true,
-    "editor.renderWhitespace": "all"
+    "editor.renderWhitespace": "all",
+    "workbench.editorAssociations": {
+        "*.md": "cweijan.markdownViewer"
+    }
 }

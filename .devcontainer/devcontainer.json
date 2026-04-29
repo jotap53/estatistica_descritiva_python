@@ -1,23 +1,35 @@
 {
   "name": "Data Science Dev",
   "build": {
-    "dockerfile": "Dockerfile"
+    "dockerfile": "Dockerfile",
+    "context": ".."
   },
+
+  "mounts": [
+    "source=${localEnv:USERPROFILE}\\.claude,target=/home/vscode/.claude,type=bind,consistency=cached"
+  ],
 
   "postCreateCommand": "pip install -r requirements.txt",
 
   "customizations": {
     "vscode": {
-			"extensions": [
-				"ms-python.python",
-				"formulahendry.code-runner",
-				"omthemes.omthemes",
-				"PKief.material-icon-theme",
-				"ms-azuretools.vscode-docker",
-				"docker.docker",
-				"ms-azuretools.vscode-containers",
-				"ms-vscode-remote.remote-containers"
-			]
+	      "settings": {
+        "workbench.editorAssociations": {
+          "*.md": "cweijan.markdownViewer"
+        }
+      },
+      "extensions": [
+        "ms-python.python",
+        "formulahendry.code-runner",
+        "omthemes.omthemes",
+        "PKief.material-icon-theme",
+        "ms-azuretools.vscode-docker",
+        "docker.docker",
+        "ms-azuretools.vscode-containers",
+        "ms-vscode-remote.remote-containers",
+        "Anthropic.claude-code",
+        "cweijan.vscode-office"
+      ]
     }
   }
 }
